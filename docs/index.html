@@ -21,6 +21,7 @@
     <div class="row">
       <div class="col-md-2">
         <div class="well">
+          <!-- Test Subject Selector -->
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -28,18 +29,25 @@
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <!-- JSON Metadata -->
+          <div id="sample-metadata" class="panel-body">
+
+
+          </div>
         </div>
       </div>
       <div class="col-md-5">
+        <!-- Horizontal Bar Graph -->
         <div id="bar"></div>
       </div>
       <div class="col-md-5">
+        <!-- OPTIONAL Gauge Graph -->
         <div id="gauge"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
+        <!-- Bubble Scatter Plot -->
         <div id="bubble"></div>
       </div>
     </div>
@@ -48,7 +56,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="./static/js/app.js"></script>
-  <script src="./static/js/bonus.js"></script>
+  <!-- <script src="./static/js/bonus.js"></script> -->
 
 </body>
 

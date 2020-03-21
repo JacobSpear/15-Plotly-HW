@@ -81,6 +81,7 @@ function optionChanged(subject){
     full_IDs = current_sample.otu_ids.map(x=>"OTU "+x);
     values = current_sample.sample_values;
     labels = current_sample.otu_labels;
+    entries = Object.entries(current_metadata);
 
     //Updates Bar Plot
     Plotly.update('bar',
@@ -111,6 +112,15 @@ function optionChanged(subject){
             title:`Distribution of Species in Sample ${current_id}`
         }
     )
+
+    //Updates MetaData
+    demoDiv = d3.select("#sample-metadata")
+    demoDiv.selectAll('p').remove()
+    demoDiv.selectAll('p')
+           .data(entries)
+           .enter()
+           .append('p')
+           .text(function(data,idx){return `${data[0]}: ${data[1]}`})
 }
 
 init();
